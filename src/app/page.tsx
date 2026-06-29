@@ -35,8 +35,7 @@ export default function HomePage() {
       </header>
 
       {/* Hero */}
-      <section className="mx-auto max-w-6xl px-6 pb-24 pt-20 md:pb-32 md:pt-28">
-        <div className="max-w-4xl">
+<section className="mx-auto max-w-6xl px-6 pb-24 pt-14 md:pb-32 md:pt-20">        <div className="max-w-4xl">
           <p className="mb-6 text-sm font-medium uppercase tracking-[0.22em] text-[#d89b2b]">
             Firearms · Training · Compliance
           </p>
