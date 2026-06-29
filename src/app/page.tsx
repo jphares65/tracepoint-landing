@@ -1,21 +1,23 @@
 import Image from "next/image";
 
 const LOGO_SRC = "/tracepoint-logo.png";
+
 const DEMO_EMAIL =
   "mailto:contact@tracepointhq.com?subject=TracePoint%20Demo%20Request";
 
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-[#0b1117] text-[#f8fafc]">
-      <header className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
+      {/* Header */}
+      <header className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
         <a href="#" className="flex items-center" aria-label="TracePoint home">
           <Image
             src={LOGO_SRC}
             alt="TracePoint"
-            width={180}
-            height={48}
+            width={300}
+            height={90}
             priority
-            className="h-11 w-auto"
+            className="h-14 w-auto md:h-16"
           />
         </a>
 
@@ -32,6 +34,7 @@ export default function HomePage() {
         </nav>
       </header>
 
+      {/* Hero */}
       <section className="mx-auto max-w-6xl px-6 pb-24 pt-20 md:pb-32 md:pt-28">
         <div className="max-w-4xl">
           <p className="mb-6 text-sm font-medium uppercase tracking-[0.22em] text-[#d89b2b]">
@@ -66,10 +69,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section
-        id="platform"
-        className="border-y border-white/10 bg-[#0f1720]"
-      >
+      {/* Platform */}
+      <section id="platform" className="border-y border-white/10 bg-[#0f1720]">
         <div className="mx-auto grid max-w-6xl gap-0 px-6 md:grid-cols-3">
           <div className="border-b border-white/10 py-10 md:border-b-0 md:border-r md:pr-10">
             <h2 className="text-xl font-semibold tracking-tight text-white">
@@ -93,16 +94,17 @@ export default function HomePage() {
 
           <div className="py-10 md:pl-10">
             <h2 className="text-xl font-semibold tracking-tight text-white">
-              Accountability
+              Analytics & Accountability
             </h2>
             <p className="mt-4 leading-7 text-slate-400">
-              Surface overdue items, documentation gaps, and operational issues
-              before they become compliance problems.
+              Surface overdue items, documentation gaps, qualification trends,
+              and operational risks before they become compliance problems.
             </p>
           </div>
         </div>
       </section>
 
+      {/* Purpose */}
       <section id="purpose" className="mx-auto max-w-6xl px-6 py-24">
         <div className="grid gap-12 md:grid-cols-[0.9fr_1.1fr]">
           <div>
@@ -123,8 +125,9 @@ export default function HomePage() {
 
             <p className="text-lg leading-8">
               TracePoint brings firearms, qualifications, training activity,
-              inspections, and compliance follow-up into one system so command,
-              training, and armory personnel can see what needs attention.
+              inspections, analytics, and compliance follow-up into one system
+              so command, training, and armory personnel can see what needs
+              attention.
             </p>
 
             <div className="border-t border-white/10 pt-8">
@@ -136,6 +139,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Contact */}
       <section id="contact" className="border-t border-white/10 bg-[#0f1720]">
         <div className="mx-auto max-w-6xl px-6 py-20">
           <div className="max-w-3xl">
@@ -160,9 +164,11 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Footer */}
       <footer className="border-t border-white/10">
         <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-8 text-sm text-slate-500 md:flex-row md:items-center md:justify-between">
           <div>© {new Date().getFullYear()} TracePoint</div>
+
           <a
             href="mailto:contact@tracepointhq.com"
             className="transition hover:text-slate-300"
