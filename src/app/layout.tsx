@@ -12,8 +12,6 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-import type { Metadata } from "next";
-
 export const metadata: Metadata = {
   title: "TracePoint | Operational Accountability",
   description:
@@ -36,6 +34,7 @@ export const metadata: Metadata = {
     type: "website",
   },
 };
+
 export default function RootLayout({
   children,
 }: Readonly<{
