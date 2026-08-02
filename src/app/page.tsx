@@ -5,6 +5,8 @@ const LOGO_SRC = "/tracepoint-logo.png";
 const DEMO_EMAIL =
   "mailto:contact@tracepointhq.com?subject=TracePoint%20Demo%20Request";
 
+const LOGIN_URL = "https://tracepoint-amber.vercel.app/login?next=%2F";
+
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-[#0b1117] text-[#f8fafc]">
@@ -21,21 +23,31 @@ export default function HomePage() {
           />
         </a>
 
-        <nav className="hidden items-center gap-8 text-sm text-slate-400 md:flex">
-          <a href="#platform" className="transition hover:text-white">
-            Platform
+        <div className="flex items-center gap-4">
+          <nav className="hidden items-center gap-8 text-sm text-slate-400 md:flex">
+            <a href="#platform" className="transition hover:text-white">
+              Platform
+            </a>
+            <a href="#purpose" className="transition hover:text-white">
+              Purpose
+            </a>
+            <a href="#contact" className="transition hover:text-white">
+              Contact
+            </a>
+          </nav>
+
+          <a
+            href={LOGIN_URL}
+            className="inline-flex items-center justify-center rounded-md border border-[#d89b2b]/70 px-4 py-2 text-sm font-semibold text-[#f5c76f] transition hover:border-[#d89b2b] hover:bg-[#d89b2b]/10 hover:text-white"
+          >
+            Login
           </a>
-          <a href="#purpose" className="transition hover:text-white">
-            Purpose
-          </a>
-          <a href="#contact" className="transition hover:text-white">
-            Contact
-          </a>
-        </nav>
+        </div>
       </header>
 
       {/* Hero */}
-<section className="mx-auto max-w-6xl px-6 pb-24 pt-14 md:pb-32 md:pt-20">        <div className="max-w-4xl">
+      <section className="mx-auto max-w-6xl px-6 pb-24 pt-14 md:pb-32 md:pt-20">
+        <div className="max-w-4xl">
           <p className="mb-6 text-sm font-medium uppercase tracking-[0.22em] text-[#d89b2b]">
             Firearms · Training · Compliance
           </p>
@@ -56,6 +68,13 @@ export default function HomePage() {
               className="inline-flex w-fit items-center justify-center rounded-md bg-[#d89b2b] px-5 py-3 text-sm font-semibold text-[#0b1117] transition hover:bg-[#e8ad43]"
             >
               Request a Demo
+            </a>
+
+            <a
+              href={LOGIN_URL}
+              className="inline-flex w-fit items-center justify-center rounded-md border border-white/15 px-5 py-3 text-sm font-semibold text-white transition hover:border-[#d89b2b]/70 hover:bg-[#d89b2b]/10"
+            >
+              Login to TracePoint
             </a>
 
             <a
@@ -151,12 +170,19 @@ export default function HomePage() {
               input and is currently preparing for pilot agency use.
             </p>
 
-            <div className="mt-8">
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a
                 href={DEMO_EMAIL}
-                className="inline-flex rounded-md bg-[#d89b2b] px-5 py-3 text-sm font-semibold text-[#0b1117] transition hover:bg-[#e8ad43]"
+                className="inline-flex w-fit rounded-md bg-[#d89b2b] px-5 py-3 text-sm font-semibold text-[#0b1117] transition hover:bg-[#e8ad43]"
               >
                 Request a Demo
+              </a>
+
+              <a
+                href={LOGIN_URL}
+                className="inline-flex w-fit items-center justify-center rounded-md border border-white/15 px-5 py-3 text-sm font-semibold text-white transition hover:border-[#d89b2b]/70 hover:bg-[#d89b2b]/10"
+              >
+                Login to TracePoint
               </a>
             </div>
           </div>
@@ -168,12 +194,21 @@ export default function HomePage() {
         <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-8 text-sm text-slate-500 md:flex-row md:items-center md:justify-between">
           <div>© {new Date().getFullYear()} TracePoint</div>
 
-          <a
-            href="mailto:contact@tracepointhq.com"
-            className="transition hover:text-slate-300"
-          >
-            contact@tracepointhq.com
-          </a>
+          <div className="flex flex-wrap items-center gap-5">
+            <a
+              href={LOGIN_URL}
+              className="transition hover:text-slate-300"
+            >
+              Login
+            </a>
+
+            <a
+              href="mailto:contact@tracepointhq.com"
+              className="transition hover:text-slate-300"
+            >
+              contact@tracepointhq.com
+            </a>
+          </div>
         </div>
       </footer>
     </main>
